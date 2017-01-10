@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+       <!--Создайте функцию truncate(str, maxlength), которая
+        проверяет длину строки str, и если она превосходит maxlength
+        – заменяет конец str на "...", так чтобы ее длина 
+        стала равна maxlength.-->
+        <script>
+            function truncate(str, maxlength) {
+                if (str.length > maxlength) {
+                    return str.slice(0, maxlength - 3) + "..."; 
+                }
+                
+                return str;
+            }
+            
+            alert( truncate("Вот что мне бы хотелось сказать по этому поводу..", 20) );
+        </script>
+    </body>
+</html>
