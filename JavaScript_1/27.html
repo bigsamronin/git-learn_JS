@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            /*получить последний элемент
+            var ranArr = [1, 2, 3, 4, 5];
+            
+            var lastItemArr = ranArr[ranArr.length - 1];
+            
+            alert( lastItemArr );*/
+            
+            /* добавить в конец массива элемент
+            var goods = [1, 2, 3, 4, 5, 6];
+            
+            goods.push("Comp");
+            
+            alert( goods );*/
+            
+            /*создание массива
+            Задача из 5 шагов-строк:
+            1.Создайте массив styles с элементами «Джаз», «Блюз».
+            2.Добавьте в конец значение «Рок-н-Ролл»
+            3.Замените предпоследнее значение с конца на «Классика». 
+            Код замены предпоследнего значения должен работать для 
+            массивов любой длины.
+            4.Удалите первое значение массива и выведите его alert.
+            5.Добавьте в начало значения «Рэп» и «Регги».
+           
+            var styles = ["Jazz", "Bluz"];
+            alert( styles );
+            
+            styles.push("Rock-n-Roll");
+            alert( styles );
+            
+            styles[styles.length - 2] = "Classic";
+            alert( styles );
+            
+            var elem = styles.shift();
+            alert( styles );
+            
+            styles.unshift("Rap", "Reggy");
+            alert( styles ); */
+            
+            /*получить случайное значение из массива
+            var arr = [1, 2, 3, 4, 5, 6, 7, 88];
+            var rand = Math.floor(Math.random() * arr.length);
+            alert( arr[rand] );
+            */
+            
+            /*
+                Напишите код, который:
+            1.Запрашивает по очереди значения при помощи prompt и сохраняет 
+            их в массиве.
+            2.Заканчивает ввод, как только посетитель введёт пустую строку,
+            не число или нажмёт «Отмена».
+            3.При этом ноль 0 не должен заканчивать ввод, это разрешённое 
+            число.
+            4.Выводит сумму всех значений массива
+            
+            var numb = [];
+            
+            while (true) {
+                var numC = prompt("Enter number: ", 0);
+                    if ( numC === "" || numC === null || isNaN(numC) )break; 
+                
+                    numb.push(+numC);
+            }
+            
+            var sum = 0;
+            
+            for ( var i = 0; i < numb.length; i++ ) {
+                sum += numb[i];
+            }
+            
+            alert( sum );
+            */
+            
+            /*поиск в массиве*/
+            function find(arr, value) {
+                if (arr.indexOf) {
+                    return arr.indexOf(value);
+                }
+                
+                for ( var i = 0; i < arr.length; i++ ) {
+                    if (arr[i] === value) return i;
+                }
+                
+                return -1;
+            }
+            
+            var arr = [1,2,3,4,5,6,7,8,89, "ewq", -12];
+            
+            alert( find( arr, 2 ) );
+            alert( find( arr, "ewq" ) );
+            alert( find( arr, -12 ) );
+            alert( find( arr, -122 ) );
+        </script>
+    </body>
+</html>
